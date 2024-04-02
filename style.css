@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+}
+
+nav {
+    background-color: #fcc500;
+    height: 70px;
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding:10px;
+    margin: 15px;
+}
+
+a:link {
+    text-decoration: none;
+    color: red;
+    font-size: x-large;
+}
+
+a:hover {
+    color:blue;
+}
+
+header {
+    text-align: center;
+    margin-top: 80px;
+}
+
+span {
+    font-family: 'Oleo Script', cursive;
+    color:#fcc500;
+    font-size: 45px;
+}
+
+.head {
+    color: white;
+}
+
+.head-1 {
+    color: white;
+    font-weight: 300;
+}
+
+.relative {
+    position: relative;
+    width: 90%;
+    height:400px;
+}
+
+.absolute {
+    position: absolute;
+    left: 200px;
+    width: 90%;
+}
+
+.section {
+    position: absolute;
+    width: 80px;
+    padding:10px 10px;
+    top: 50px;
+} 
+
+.section1 {
+    position: absolute;
+    width: 80px;
+    padding:10px 10px;
+    top: 50px;
+    left: 850px;
+} 
+
+.section-1 {
+    border: 1.5px solid black;
+    padding: 10px 30px;
+    color: black;
+    background-color: gray;
+}
+
+.arrow {
+    position: absolute;
+    top: 50px;
+    left: 505px;
+    background-color: gray;
+    padding: 10px;
+    border: 1px solid;
+    padding: 1px 5px;
+}
+
+.text {
+    position: absolute;
+    top: 130px;
+}
+
+.text-1 {
+    position: absolute;
+    top: 130px;
+    left: 550px;
+}
+
+.submit {
+    position: absolute;
+    top: 400px;
+    left: 450px;
+}
+
+#contact{
+  font-family: 'Teko', sans-serif;
+  padding-top: 50px;
+  width: 100%;
+  width: 100vw;
+  height: 730px; /* change it to your value depending on context*/
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color : #fff;    
+}
+
+button {
+    background-color: grey;
+    border: none;
+    padding: 20px 60px;
+    color: white;
+    font-size: 1.1em;
+}
+
+textare.placeholder {
+   margin: 60px;
+}
