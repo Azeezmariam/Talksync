@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    position: absolute;
+    border: none;
+    padding: 30.75rem 2.5rem;
+    left: 16.875rem;
+    width: 80%;
+    background-color: #dddddd;
+}
+
+.relative {
+    position: relative;
+    height: 31.3rem;
+    width: 90%;
+}
+
+.absolute {
+    position: absolute;
+    width: 90%;
+    top: 2rem;
+}
+
+.header  {
+    position: absolute;
+    top: 2rem;
+    left: 19rem;
+}
+
+.head {
+    position: absolute;
+    border: 0.09rem  solid gold;
+    padding: 0.94rem 1.87rem;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+    top: 20rem;
+}
+
+.head1 {
+    position: absolute;
+    left: 9rem;
+    top: 20rem;
+}
+
+.para {
+    position: absolute;
+    left: 9rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: lighter;
+    margin-top: 1.5rem;
+    top: 20rem;
+}
+
+
+.line {
+    position: absolute;
+    border-top: 0.001rem solid black;
+    width: 90%;
+    top: 18rem;
+} 
+
+.head2 {
+    position: absolute;
+    border: 0.09rem  solid gold;
+    padding: 0.94rem 1.87rem;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+    top: 25rem;
+}
+
+.head2-1 {
+    position: absolute;
+    left: 9rem;
+    top: 25rem;
+}
+
+.para1 {
+    position: absolute;
+    left: 9rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: lighter;
+    top: 25rem;
+    margin-top: 1.5rem;
+}
+
+.head3 {
+    position: absolute;
+    border: 0.09rem  solid gold;
+    padding: 0.94rem 1.87rem;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+    top: 30rem;
+}
+
+.head3-1 {
+    position: absolute;
+    left: 9rem;
+    top: 30rem;
+}
+
+.para2 {
+    position: absolute;
+    left: 9rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: lighter;
+    top: 30rem;
+    margin-top: 1.5rem;
+}
+
+.head4 {
+    position: absolute;
+    border: 0.09rem  solid gold;
+    padding: 0.94rem 1.87rem;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+    top: 35rem;
+}
+
+.head4-1 {
+    position: absolute;
+    left: 9rem;
+    top: 35rem;
+}
+
+.para3 {
+    position: absolute;
+    left: 9rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: lighter;
+    top: 35rem;
+    margin-top: 1.5rem;
+}
+
+.head5 {
+    position: absolute;
+    border: 0.09rem  solid gold;
+    padding: 0.94rem 1.87rem;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+    top: 40rem;
+}
+
+.head5-1 {
+    position: absolute;
+    left: 9rem;
+    top: 40rem;
+}
+
+.para4 {
+    position: absolute;
+    left: 9rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: lighter;
+    top: 40rem;
+    margin-top: 1.5rem;
+}
+
+.head6 {
+    position: absolute;
+    border: 0.09rem  solid gold;
+    padding: 0.94rem 1.87rem;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+    top: 45rem;
+}
+
+.head6-1 {
+    position: absolute;
+    left: 9rem;
+    top: 45rem;
+}
+
+.para5 {
+    position: absolute;
+    left: 9rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: lighter;
+    top: 45rem;
+    margin-top: 1.5rem;
+}
+
+.head7 {
+    position: absolute;
+    border: 0.09rem  solid gold;
+    padding: 0.94rem 1.87rem;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+    top: 50rem;
+}
+
+.head7-1 {
+    position: absolute;
+    left: 9rem;
+    top: 50rem;
+}
+
+.para6 {
+    position: absolute;
+    left: 9rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: lighter;
+    top: 50rem;
+    margin-top: 1.5rem;
+}
