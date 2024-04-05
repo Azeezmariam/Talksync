@@ -13,15 +13,38 @@ nav {
     height: 70px;
 }
 
-ul {
-    list-style: none;
-    overflow: hidden;
+.box {
+    color: white;
+    font-size: small;
+}
+
+.box1 {
+    color: white;
+    background-color: #89253e;
+    padding: 5px 10px;
+    font-size: small;
 }
 
 li {
-    float: left;
-    padding:10px;
-    margin: 15px;
+    float: right;
+    padding: 9px;
+    margin: 20px 15px 0px 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+h2 {
+    position: absolute;
+    top: 15px;
+    font-size: 40px;
+    left: 90px;
+    color: white;
+    font-weight: 900;
 }
 
 a:link {

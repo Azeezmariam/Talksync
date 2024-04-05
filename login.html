@@ -6,34 +6,74 @@
     <link rel="stylesheet" href="login.css">
     <title>Login Interface</title>
 </head>
-
-
-
 <body>
-
     <hr>
-  <div id="log">
-  <div class="box">
-        <legend> Log in into Translate Webpage </legend> <br><br>
-        <form>
-            <div id="login">
-            <label for="fname"> First Name: </label>
-            <input type="text" id="fname" name="fname" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John"><br><br>
-            <label for="lname"> Last Name: </label>
-            <input type="text" id="lname" name="lname" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doe"><br><br>
-            <label for="email"> Email: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="email" id="email" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com"><br><br>
-            <label for="pwd" > Password: </label>&nbsp;
-            <input type="password" id="pwd" name="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****"><br><br><br>
-            <button type="submit" class="stud"><a href="index.html" class="stud"> Click To Login </a></button><br><br>
-            <p> New User? <a href="signin.html"> Register Now! </a>  <a href="#"> Forget Password </a></p>
-            </div>
-        </form>
-      </div><br><br><br><br><br><br>
-  <footer>
-    <p> &copy; 2024 Talksync. All Rights Reserved. </p>  
-  </footer>
-</div>
-    
+    <div id="log">
+        <div class="box">
+            <legend>Log in into Translate Webpage</legend><br><br>
+            <form id="loginForm">
+                <div id="login">
+                    <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="email" id="email" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com"><br><br>
+                    <label for="pwd">Password:</label>&nbsp;
+                    <input type="password" id="pwd" name="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****"><br><br><br>
+                    <button type="submit" id="loginbtn" class="stud">Click To Login</button><br><br>
+                    <p>New User? <a href="signin.html">Register Now!</a> <a href="#">Forget Password</a></p>
+                </div>
+            </form>
+        </div><br><br><br><br><br><br>
+        <footer>
+            <p>&copy; 2024 Talksync. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', async (event) => {
+          event.preventDefault(); // Prevent the default form submission behavior
+  
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('pwd').value;
+  
+          // Prepare request body
+          const requestBody = {
+              email,
+              password
+          };
+  
+          try {
+              const response = await fetch('http://localhost:3000/login', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(requestBody),
+              });
+  
+              console.log('Response status:', response.status); // Log response status
+  
+              if (!response.ok) {
+                  if (response.status === 401) {
+                      throw new Error('Incorrect email or password. Please try again.');
+                  } else {
+                      throw new Error('Failed to login: ' + response.statusText);
+                  }
+              }
+  
+              // Handle successful login response
+              const data = await response.json();
+              console.log('Login successful:', data); // Log success message
+  
+              // Redirect or perform any other action upon successful login
+              console.log('Redirecting to index.html...'); // Log redirect message
+              window.location.href = 'index.html';
+          } catch (error) {
+              console.error('Login error:', error);
+              // Display error message to the user
+              alert(error.message);
+          }
+      });
+  </script>
+  
+  
+
 </body>
 </html>

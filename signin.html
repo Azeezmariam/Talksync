@@ -9,14 +9,84 @@
 </head>
 <body>
 
+    <nav>
+        <h2>TalkSync</h2>
+        <ul>
+            <li><a href="signin.html" class="box1">Register</a></li>
+            <li><a href="login.html" class="box1">Login</a></li>
+            <li><a href="resources.html" class="box">Resources</a></li>
+            <li><a href="#" class="box">Contact</a></li>
+            <li><a href="#" class="box">About Us</a></li>
+            <li><a href="landpage.html" class="box">Home</a></li>
+        </ul>
+    </nav>
+
     <div class="section">
         <h1>Welcome to <span>TalkSync</span></h1>
         <p>Already signed up? <a href="login.html">Log in</a></p>
-    
+
+        <div id="registrationINFO"></div>
+        <input type="text" id="name" placeholder="&nbsp;&nbsp;&nbsp;Your Full Name"><br><br><br>
         <input type="text" id="email" placeholder="&nbsp;&nbsp;&nbsp;Your email address"><br><br><br>
-        <input type="text" class="pwd" placeholder="&nbsp;&nbsp;&nbsp;Create a password"><br><br><br>
-        <input type="text"  class="pwd" placeholder="&nbsp;&nbsp;&nbsp;Confirm your password"><br><br>
-        <button><i class="fa-solid fa-user-lock" id="solid"></i><a href="index.html">Sign up</a></button>
+        <input type="password" id="pwd" class="pwd" placeholder="&nbsp;&nbsp;&nbsp;Create a password"><br><br><br>
+        <input type="password" id="c_pwd" class="c_pwd" placeholder="&nbsp;&nbsp;&nbsp;Confirm your password"><br><br>
+        <button id="registerBtn"><i class="fa-solid fa-user-lock" id="solid"></i>Sign up</button>
     </div>
+
+    <script>
+        document.getElementById('registerBtn').addEventListener('click', async () => {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pwd').value;
+            const confirm_password = document.getElementById('c_pwd').value;
+            
+            // Prepare request body
+            const requestBody = {
+                name,
+                email,
+                password,
+                confirm_password
+            };
+
+            // Check for empty input fields
+            if (!name || !email || !password || !confirm_password ) {
+                registrationINFO.innerHTML = 'Please fill in all fields.';
+                return;
+            }
+
+            if (password !== confirm_password) {
+                document.getElementById('registrationINFO').innerHTML = 'Passwords do not match.';
+                return;
+            }
+
+            
+    
+            try {
+                const response = await fetch('http://localhost:3000/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody),
+                });
+    
+                if (!response.ok) {
+                    throw new Error('email address already exist: ' + response.statusText);
+                }
+    
+                const data = await response.json();
+                document.getElementById('registrationINFO').innerHTML = data.message;
+                console.log(data);
+                // Check if redirectToLogin is true
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 4000);
+            } catch (error) {
+                document.getElementById('registrationINFO').innerHTML = 'Error: ' + error.message;
+                console.error('Registration error:', error);
+            }
+        });
+    </script>
+
 </body>
 </html>

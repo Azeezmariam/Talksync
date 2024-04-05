@@ -16,14 +16,58 @@ body {
     background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
   }
 
+li {
+    float: right;
+    padding: 9px;
+    margin: 20px 15px 0px 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+h2 {
+    position: absolute;
+    top: 15px;
+    font-size: 40px;
+    left: 90px;
+    color: white;
+    font-weight: 900;
+}
+
+.box {
+    color: white;
+}
+
+.box1 {
+    color: white;
+    padding: 5px 10px;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:active {
+    color: rgb(215, 17, 17);
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
 .section  {
     position: absolute;
-    top: 100px;
+    top: 50px;
     text-align: center;
     Margin:30px auto;
     Padding:30px;
     Width: 450px; 
-    Height: 450px;
+    Height: 500px;
     Position: relative;
     Background-color: white;
 }
@@ -49,12 +93,18 @@ h1 {
 }
 
 p {
-    margin-bottom: 65px;
+    margin-bottom: 40px;
     color: red;
 }
 
+input {
+padding: 5px;
+}
+
 #email,
-.pwd {
+#name,
+.pwd,
+.c_pwd {
     position: absolute;
     left: 50px;
     width: 350px;
@@ -63,7 +113,7 @@ p {
 
 button {
     position: absolute;
-    top: 350px;
+    top: 430px;
     left: 50px;
     width: 350px;
     height: 40px;
@@ -71,6 +121,17 @@ button {
     color: white;
     border: none;
     font-size: large;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #363534;
+}
+
+#registrationINFO {
+    color: red;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
 #solid {
